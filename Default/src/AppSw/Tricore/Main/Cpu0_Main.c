@@ -35,19 +35,28 @@
  * \documents https://www.infineon.com/aurix-expert-training/TC29B_iLLD_UM_1_0_1_12_0.chm
  * \lastUpdated 2020-12-18
  *********************************************************************************************************************/
+
 #include "Ifx_Types.h"
 #include "IfxCpu.h"
 #include "IfxScuWdt.h"
 #include "IfxPort.h"
 #include "Bsp.h"
+#include "../src/BaseSw/Qspi/Qspi0.h"
+#include "../src/BaseSw/GPT12_Timer_Interrupt.h"
+//#include "../lvgl/lvgl.h"
+//#include "../lvgl/lv_init.h"
+#include "../lv_examples/lv_examples.h"
+#include "LedBlink.h"
 
 /*********************************************************************************************************************/
 /*------------------------------------------------------Macros-------------------------------------------------------*/
 /*********************************************************************************************************************/
-#define LED_D107    &MODULE_P13,0                                           /* LED D107: Port, Pin definition       */
+                                     /* LED D107: Port, Pin definition       */
 #define WAIT_TIME   100
 
 IfxCpu_syncEvent g_cpuSyncEvent = 0;
+
+unsigned long touchTimeUp = 0;
 
 int core0_main(void)
 {
@@ -63,17 +72,11 @@ int core0_main(void)
     IfxCpu_emitEvent(&g_cpuSyncEvent);
     IfxCpu_waitEvent(&g_cpuSyncEvent, 1);
 
-    /* Initialization of the LED used in this example */
-    IfxPort_setPinModeOutput(LED_D107, IfxPort_OutputMode_pushPull, IfxPort_OutputIdx_general);
-
-    /* Switch OFF the LED (low-level active) */
-    IfxPort_setPinHigh(LED_D107);
+    InitLed();
 
     while(1)
     {
-    	IfxPort_togglePin(LED_D107);                                                /* Toggle the state of the LED      */
-		waitTime(IfxStm_getTicksFromMilliseconds(BSP_DEFAULT_TIMER, WAIT_TIME));    /* Wait 500 milliseconds            */
-
+    	BlinkLed(200);
     }
     return (1);
 }

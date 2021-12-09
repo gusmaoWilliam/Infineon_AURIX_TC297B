@@ -6,7 +6,6 @@
   <iLLD:file class="mchal">Scu/Std/IfxScuWdt.c</iLLD:file>
   <iLLD:file class="mchal">Port/Std/IfxPort.c</iLLD:file>
   <iLLD:file class="mchal">_Impl/IfxPort_cfg.c</iLLD:file>
-  <iLLD:file class="mchal">_Impl/IfxFft_cfg.c</iLLD:file>
   <iLLD:file class="mchal">Fft/Std/IfxFft.c</iLLD:file>
   <iLLD:file class="mchal">Fft/Fft/IfxFft_Fft.c</iLLD:file>
   <iLLD:file class="mchal">Dma/Dma/IfxDma_Dma.c</iLLD:file>

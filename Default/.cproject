@@ -35,7 +35,7 @@
                         						
                         <toolChain id="com.rt.hightec.buildsystem.tricore.new.toolchain.new.executable.1414814846" name="TriCore Toolchain" superClass="com.rt.hightec.buildsystem.tricore.new.toolchain.new.executable">
                             							
-                            <option id="com.rt.hightec.buildsystem.tricore.new.mcpu.976716946" name="CPU type (-mcpu)" superClass="com.rt.hightec.buildsystem.tricore.new.mcpu" value="TC29XX" valueType="enumerated"/>
+                            <option id="com.rt.hightec.buildsystem.tricore.new.mcpu.976716946" name="CPU type (-mcpu=&lt;value&gt;)" superClass="com.rt.hightec.buildsystem.tricore.new.mcpu" value="TC29XX" valueType="enumerated"/>
                             							
                             <targetPlatform archList="TriCore" binaryParser="org.eclipse.cdt.core.ELF" id="com.rt.hightec.buildsystem.tricore.new.excutable.targetplatform.814839672" isAbstract="false" name="Infineon\TC297B Application Kit\AppKit_TC297B_singlecore" superClass="com.rt.hightec.buildsystem.tricore.new.excutable.targetplatform"/>
                             							
@@ -72,18 +72,6 @@
                                 </option>
                                 								
                                 <inputType id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.c.inputType.1910136556" name="Compiler Input (C)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.c.inputType"/>
-                                							
-                            </tool>
-                            							
-                            <tool id="com.rt.hightec.buildsystem.tricore.new.compiler.pcp.1723401213" name="TriCore PCP Compiler">
-                                								
-                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="pcp.opion.include.path.92777988" name="Include Paths" superClass="pcp.opion.include.path" valueType="includePath">
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;../h&quot;"/>
-                                    								
-                                </option>
-                                								
-                                <inputType id="com.rt.hightec.buildsystem.tricore.new.compiler.c.input.cpcp.432719997" name="Compiler Input (CPCP)"/>
                                 							
                             </tool>
                             							
@@ -203,7 +191,7 @@
                         						
                         <toolChain id="com.rt.hightec.buildsystem.tricore.new.toolchain.new.executable.570935563" name="TriCore Toolchain" superClass="com.rt.hightec.buildsystem.tricore.new.toolchain.new.executable">
                             							
-                            <option id="com.rt.hightec.buildsystem.tricore.new.mcpu.1268708295" name="CPU type (-mcpu)" superClass="com.rt.hightec.buildsystem.tricore.new.mcpu" value="TC29XX" valueType="enumerated"/>
+                            <option id="com.rt.hightec.buildsystem.tricore.new.mcpu.1268708295" name="CPU type (-mcpu=&lt;value&gt;)" superClass="com.rt.hightec.buildsystem.tricore.new.mcpu" value="TC29XX" valueType="enumerated"/>
                             							
                             <targetPlatform archList="TriCore" binaryParser="org.eclipse.cdt.core.ELF" id="com.rt.hightec.buildsystem.tricore.new.excutable.targetplatform.1312307480" isAbstract="false" name="Infineon\TC297B Application Kit\AppKit_TC297B_singlecore" superClass="com.rt.hightec.buildsystem.tricore.new.excutable.targetplatform"/>
                             							
@@ -211,13 +199,13 @@
                             							
                             <tool id="com.rt.hightec.buildsystem.tricore.new.compiler.cpp.468190639" name="TriCore C++ Compiler" superClass="com.rt.hightec.buildsystem.tricore.new.compiler.cpp">
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined.132647419" name="Defined symbols (-D)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined" valueType="definedSymbols">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined.132647419" name="Defined symbols (-D)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined" valueType="definedSymbols">
                                     									
                                     <listOptionValue builtIn="false" value="APPKIT_TC297TFT"/>
                                     								
                                 </option>
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths.1497464445" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths" valueType="includePath">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths.1497464445" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="&quot;../h&quot;"/>
                                     								
@@ -227,13 +215,13 @@
                             							
                             <tool id="com.rt.hightec.buildsystem.tricore.new.compiler.c.1925661528" name="TriCore C Compiler" superClass="com.rt.hightec.buildsystem.tricore.new.compiler.c">
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined.483298547" name="Defined symbols (-D)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined" valueType="definedSymbols">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined.483298547" name="Defined symbols (-D)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined" valueType="definedSymbols">
                                     									
                                     <listOptionValue builtIn="false" value="APPKIT_TC297TFT"/>
                                     								
                                 </option>
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths.14860272" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths" valueType="includePath">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths.14860272" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="&quot;../h&quot;"/>
                                     								
@@ -243,21 +231,9 @@
                                 							
                             </tool>
                             							
-                            <tool id="com.rt.hightec.buildsystem.tricore.new.compiler.pcp.664608224" name="TriCore PCP Compiler" superClass="com.rt.hightec.buildsystem.tricore.new.compiler.pcp">
-                                								
-                                <option id="pcp.opion.include.path.2048893064" name="Include Paths" superClass="pcp.opion.include.path" valueType="includePath">
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;../h&quot;"/>
-                                    								
-                                </option>
-                                								
-                                <inputType id="com.rt.hightec.buildsystem.tricore.new.compiler.c.input.cpcp.1538457549" name="Compiler Input (CPCP)" superClass="com.rt.hightec.buildsystem.tricore.new.compiler.c.input.cpcp"/>
-                                							
-                            </tool>
-                            							
                             <tool id="com.rt.hightec.buildsystem.tricore.new.assembler.353599315" name="TriCore Assembler" superClass="com.rt.hightec.buildsystem.tricore.new.assembler">
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.assembler.general.includepath.1183596658" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.assembler.general.includepath" valueType="includePath">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.assembler.general.includepath.1183596658" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.assembler.general.includepath" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="&quot;../h&quot;"/>
                                     								
@@ -269,7 +245,7 @@
                             							
                             <tool id="com.rt.hightec.buildsystem.tricore.new.assembler.gtm.94947078" name="TriCore GTM Assembler" superClass="com.rt.hightec.buildsystem.tricore.new.assembler.gtm">
                                 								
-                                <option id="gtm.opion.include.path.1775867197" name="Include Paths" superClass="gtm.opion.include.path" valueType="includePath">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gtm.opion.include.path.1775867197" name="Include Paths" superClass="gtm.opion.include.path" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="&quot;../h&quot;"/>
                                     								
@@ -281,11 +257,11 @@
                             							
                             <tool id="com.rt.hightec.buildsystem.tricore.new.linker.c.1995631201" name="TriCore C Linker" superClass="com.rt.hightec.buildsystem.tricore.new.linker.c">
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.general.description.file.1431874737" name="Browse Linker Description File (-T)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.general.description.file" value="../ld/iROM.ld" valueType="string"/>
+                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.general.description.file.1431874737" name="Browse Linker Description File (-T)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.general.description.file" value="&quot;../ld/iROM.ld&quot;" valueType="string"/>
                                 								
                                 <option id="abstract.tool.linker.warnings.no.warn.flags.1616494014" name="Do not warn about incompatible section flags (-Wl,--no-warn-flags)" superClass="abstract.tool.linker.warnings.no.warn.flags" value="true" valueType="boolean"/>
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options.736149822" name="Other options" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options" valueType="stringList">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options.736149822" name="Other options" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options" valueType="stringList">
                                     									
                                     <listOptionValue builtIn="false" value="-Wl,-n"/>
                                     								
@@ -309,7 +285,7 @@
                                 								
                                 <option id="abstract.tool.linker.warnings.no.warn.flags.573281023" name="Do not warn about incompatible section flags (-Wl,--no-warn-flags)" superClass="abstract.tool.linker.warnings.no.warn.flags" value="true" valueType="boolean"/>
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options.1518433796" name="Other options" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options" valueType="stringList">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options.1518433796" name="Other options" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options" valueType="stringList">
                                     									
                                     <listOptionValue builtIn="false" value="-Wl,-n"/>
                                     								
@@ -441,6 +417,12 @@
                                 								
                                 <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.CodeGeneration.ffuncsec.1080445643" name="Generate a section for each function (-ffunction-sections)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.CodeGeneration.ffuncsec" useByScannerDiscovery="false" value="true" valueType="boolean"/>
                                 								
+                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.CodeGeneration.mAsectionFunctionSections.1580182934" name="Apply -ffunction-sections-like section name generation to functions with an asection attribute (-masection-function-sections)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.CodeGeneration.mAsectionFunctionSections" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+                                								
+                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.CodeGeneration.mAsectionDataSections.1039365778" name="Apply -fdata-sections-like section name generation to data objects with an asection attribute (-masection-data-sections)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.CodeGeneration.mAsectionDataSections" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+                                								
+                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.CodeGeneration.mPragmaFunctionSections.514878292" name="Apply -ffunction-sections-like section name generation to functions in a pragma section (-mpragma-function-sections)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.CodeGeneration.mPragmaFunctionSections" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+                                								
                                 <inputType id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.c.inputType.673634016" name="Compiler Input (C)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.c.inputType"/>
                                 							
                             </tool>
@@ -513,7 +495,13 @@
                         						
                         <entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="h"/>
                         						
+                        <entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="lv_examples"/>
+                        						
+                        <entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="lvgl"/>
+                        						
                         <entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+                        						
+                        <entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="tft"/>
                         					
                     </sourceEntries>
                     				
@@ -557,7 +545,7 @@
                         						
                         <toolChain id="com.rt.hightec.buildsystem.tricore.new.toolchain.new.executable.214217259" name="TriCore Toolchain" superClass="com.rt.hightec.buildsystem.tricore.new.toolchain.new.executable">
                             							
-                            <option id="com.rt.hightec.buildsystem.tricore.new.mcpu.904923349" name="CPU type (-mcpu)" superClass="com.rt.hightec.buildsystem.tricore.new.mcpu" value="TC29XX" valueType="enumerated"/>
+                            <option id="com.rt.hightec.buildsystem.tricore.new.mcpu.904923349" name="CPU type (-mcpu=&lt;value&gt;)" superClass="com.rt.hightec.buildsystem.tricore.new.mcpu" value="TC29XX" valueType="enumerated"/>
                             							
                             <targetPlatform archList="TriCore" binaryParser="org.eclipse.cdt.core.ELF" id="com.rt.hightec.buildsystem.tricore.new.excutable.targetplatform.1896431615" isAbstract="false" name="Infineon\TC297B Application Kit\AppKit_TC297B_singlecore" superClass="com.rt.hightec.buildsystem.tricore.new.excutable.targetplatform"/>
                             							
@@ -565,13 +553,13 @@
                             							
                             <tool id="com.rt.hightec.buildsystem.tricore.new.compiler.cpp.1480737366" name="TriCore C++ Compiler" superClass="com.rt.hightec.buildsystem.tricore.new.compiler.cpp">
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined.91209099" name="Defined symbols (-D)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined" valueType="definedSymbols">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined.91209099" name="Defined symbols (-D)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined" valueType="definedSymbols">
                                     									
                                     <listOptionValue builtIn="false" value="APPKIT_TC297TFT"/>
                                     								
                                 </option>
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths.1857454498" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths" valueType="includePath">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths.1857454498" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="&quot;../h&quot;"/>
                                     								
@@ -581,13 +569,13 @@
                             							
                             <tool id="com.rt.hightec.buildsystem.tricore.new.compiler.c.1931787928" name="TriCore C Compiler" superClass="com.rt.hightec.buildsystem.tricore.new.compiler.c">
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined.471792997" name="Defined symbols (-D)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined" valueType="definedSymbols">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined.471792997" name="Defined symbols (-D)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined" valueType="definedSymbols">
                                     									
                                     <listOptionValue builtIn="false" value="APPKIT_TC297TFT"/>
                                     								
                                 </option>
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths.1140684748" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths" valueType="includePath">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths.1140684748" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="&quot;../h&quot;"/>
                                     								
@@ -597,21 +585,9 @@
                                 							
                             </tool>
                             							
-                            <tool id="com.rt.hightec.buildsystem.tricore.new.compiler.pcp.1813048612" name="TriCore PCP Compiler" superClass="com.rt.hightec.buildsystem.tricore.new.compiler.pcp">
-                                								
-                                <option id="pcp.opion.include.path.813368725" name="Include Paths" superClass="pcp.opion.include.path" valueType="includePath">
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;../h&quot;"/>
-                                    								
-                                </option>
-                                								
-                                <inputType id="com.rt.hightec.buildsystem.tricore.new.compiler.c.input.cpcp.1074098289" name="Compiler Input (CPCP)" superClass="com.rt.hightec.buildsystem.tricore.new.compiler.c.input.cpcp"/>
-                                							
-                            </tool>
-                            							
                             <tool id="com.rt.hightec.buildsystem.tricore.new.assembler.758168814" name="TriCore Assembler" superClass="com.rt.hightec.buildsystem.tricore.new.assembler">
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.assembler.general.includepath.1203921473" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.assembler.general.includepath" valueType="includePath">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.assembler.general.includepath.1203921473" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.assembler.general.includepath" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="&quot;../h&quot;"/>
                                     								
@@ -623,7 +599,7 @@
                             							
                             <tool id="com.rt.hightec.buildsystem.tricore.new.assembler.gtm.388622057" name="TriCore GTM Assembler" superClass="com.rt.hightec.buildsystem.tricore.new.assembler.gtm">
                                 								
-                                <option id="gtm.opion.include.path.918311558" name="Include Paths" superClass="gtm.opion.include.path" valueType="includePath">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gtm.opion.include.path.918311558" name="Include Paths" superClass="gtm.opion.include.path" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="&quot;../h&quot;"/>
                                     								
@@ -637,13 +613,13 @@
                                 								
                                 <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.general.description.file.429639291" name="Browse Linker Description File (-T)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.general.description.file" value="../ld/memoryIntCode.x" valueType="string"/>
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.lib.Includepath.1384568409" name="Library search path (-L)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.lib.Includepath" valueType="libPaths">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.lib.Includepath.1384568409" name="Library search path (-L)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.lib.Includepath" valueType="libPaths">
                                     									
                                     <listOptionValue builtIn="false" value="../ld"/>
                                     								
                                 </option>
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options.1001124503" name="Other options" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options" valueType="stringList">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options.1001124503" name="Other options" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options" valueType="stringList">
                                     									
                                     <listOptionValue builtIn="false" value="-Wl,-n"/>
                                     								
@@ -665,13 +641,13 @@
                                 								
                                 <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.general.description.file.1967428419" name="Browse Linker Description File (-T)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.general.description.file" value="../ld/memoryIntCode.x" valueType="string"/>
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.lib.Includepath.1567998361" name="Library search path (-L)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.lib.Includepath" valueType="libPaths">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.lib.Includepath.1567998361" name="Library search path (-L)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.lib.Includepath" valueType="libPaths">
                                     									
                                     <listOptionValue builtIn="false" value="../ld"/>
                                     								
                                 </option>
                                 								
-                                <option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options.1965292207" name="Other options" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options" valueType="stringList">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options.1965292207" name="Other options" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options" valueType="stringList">
                                     									
                                     <listOptionValue builtIn="false" value="-Wl,-n"/>
                                     								
@@ -706,12 +682,6 @@
     <storageModule moduleId="cdtBuildSystem" version="4.0.0">
         		
         <project id="Blinky_Ld.com.rt.hightec.buildsystem.tricore.new.projectType.1069684755" name="TriCore Project" projectType="com.rt.hightec.buildsystem.tricore.new.projectType"/>
-        	
-    </storageModule>
-    	
-    <storageModule moduleId="scannerConfiguration">
-        		
-        <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
         	
     </storageModule>
     	
@@ -770,5 +740,25 @@
         </buildTargets>
         	
     </storageModule>
+    	
+    <storageModule moduleId="scannerConfiguration">
+        		
+        <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+        		
+        <scannerConfigBuildInfo instanceId="com.rt.hightec.buildsystem.tricore.new.configuration.excutable.1921430436;com.rt.hightec.buildsystem.tricore.new.configuration.excutable.1921430436.;com.rt.hightec.buildsystem.tricore.new.compiler.c.172095326;com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.c.inputType.673634016">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.rt.hightec.framework.buildsystem.HighTecGCCManagedMakePerProjectProfile"/>
+            		
+        </scannerConfigBuildInfo>
+        		
+        <scannerConfigBuildInfo instanceId="com.rt.hightec.buildsystem.tricore.new.configuration.excutable.1921430436;com.rt.hightec.buildsystem.tricore.new.configuration.excutable.1921430436.;com.rt.hightec.buildsystem.tricore.new.assembler.gtm.1597715359;gtm.input.1526672667">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.rt.hightec.framework.buildsystem.HighTecGCCManagedMakePerProjectProfile"/>
+            		
+        </scannerConfigBuildInfo>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
     
 </cproject>
