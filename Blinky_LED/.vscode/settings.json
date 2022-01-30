@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "configuration.h": "c",
+        "configurationisr.h": "c",
+        "ifxqspi_spimaster.h": "c",
+        "ifxport.h": "c",
+        "ifxqspi_pinmap.h": "c",
+        "ifx_cfg.h": "c"
+    }
+}

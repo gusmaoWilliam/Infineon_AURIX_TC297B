@@ -39,8 +39,12 @@
 #include "IfxCpu.h"
 #include "IfxScuWdt.h"
 #include "Blinky_LED.h"
+#include "tfthw.h"
+#include "touch.h"
 
 IfxCpu_syncEvent g_cpuSyncEvent = 0;
+#define BG_LED    &MODULE_P20,13
+#define BUTTON &MODULE_P14,4    /* Port pin for the button  */
 
 int core0_main(void)
 {
@@ -56,7 +60,23 @@ int core0_main(void)
     IfxCpu_emitEvent(&g_cpuSyncEvent);
     IfxCpu_waitEvent(&g_cpuSyncEvent, 1);
 
+    IfxPort_setPinModeOutput(BG_LED, IfxPort_OutputMode_pushPull, IfxPort_OutputIdx_general);
+    IfxPort_setPinMode(BUTTON, IfxPort_Mode_inputPullUp);
+    IfxPort_setPinHigh(BG_LED);
+
     initLED();  /* Initialize the LED port pin      */
+
+    tft_init();
+    //touch_init();
+    tft_display_setxy(0, 0, 320, 240);
+    uint16 buf[320*240];
+
+    for(uint16 i = 0; i < (320*120); i++)
+    {
+            Row_Buff[i] = 0xF800;
+    }
+    //ILI9341_DrawColorBurst(0xFFFF, 320*240);
+    tft_flush_row_buff(320*240, buf);
 
     while(1)
     {

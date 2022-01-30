@@ -26,7 +26,7 @@
  */
 
 #ifndef IFX_CFG_H
-#define IFX_CFG_H
+#define IFX_CFG_H 1
 
 /******************************************************************************/
 /*-----------------------------------Macros-----------------------------------*/
@@ -41,11 +41,12 @@
 /**
  * \name Frequency configuration
  * \{
- */
-#define IFX_CFG_SCU_XTAL_FREQUENCY (20000000)  /**< \copydoc IFX_CFG_SCU_XTAL_FREQUENCY */
-#define IFX_CFG_SCU_PLL_FREQUENCY  (200000000) /**< \copydoc IFX_CFG_SCU_PLL_FREQUENCY */
-#define IFXCPU_CSTART_CCU_INIT_HOOK()          /**< \copydoc IFXCPU_CSTART_CCU_INIT_HOOK */
-/** \} */
+/* External oscillator frequency in Hz */
+#define IFX_CFG_SCU_XTAL_FREQUENCY      (20000000)  /* Allowed values are: 16000000, 20000000 or 40000000 */
+/* PLL frequency in Hz */
+#define IFX_CFG_SCU_PLL_FREQUENCY       (300000000) /* Allowed values are: 80000000, 133000000, 160000000, 200000000, 
+                                                     * 240000000 or 300000000 */
+
 
 /** \} */
 
