@@ -7,5 +7,4 @@
   <iLLD:file class="mchal">Port/Std/IfxPort.c</iLLD:file>
   <iLLD:file class="mchal">_Impl/IfxPort_cfg.c</iLLD:file>
   <iLLD:file class="mchal">Iom/Std/IfxIom.c</iLLD:file>
-  <iLLD:file class="mchal">Iom/Iom/IfxIom_Iom.c</iLLD:file>
 </iLLD:filelist>

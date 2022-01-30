@@ -41,10 +41,13 @@
 #include "Blinky_LED.h"
 #include "tfthw.h"
 #include "touch.h"
+#include "Bsp.h"
 
 IfxCpu_syncEvent g_cpuSyncEvent = 0;
 #define BG_LED    &MODULE_P20,13
 #define BUTTON &MODULE_P14,4    /* Port pin for the button  */
+uint16 buf[320];
+uint16 buf2[320];
 
 int core0_main(void)
 {
@@ -63,24 +66,58 @@ int core0_main(void)
     IfxPort_setPinModeOutput(BG_LED, IfxPort_OutputMode_pushPull, IfxPort_OutputIdx_general);
     IfxPort_setPinMode(BUTTON, IfxPort_Mode_inputPullUp);
     IfxPort_setPinHigh(BG_LED);
-
+    waitTime(IfxStm_getTicksFromMilliseconds(BSP_DEFAULT_TIMER, 100));
     initLED();  /* Initialize the LED port pin      */
 
     tft_init();
-    //touch_init();
-    tft_display_setxy(0, 0, 320, 240);
-    uint16 buf[320*240];
+    waitTime(IfxStm_getTicksFromMilliseconds(BSP_DEFAULT_TIMER, 100));
+    touch_init();
+    waitTime(IfxStm_getTicksFromMilliseconds(BSP_DEFAULT_TIMER, 100));
 
-    for(uint16 i = 0; i < (320*120); i++)
+    for(uint32 i = 0; i < (320); i++)
     {
-            Row_Buff[i] = 0xF800;
+    	if(i < 320/2)
+    		buf[i] = 0x780F;
+    	else
+    		buf[i] = 0x07E0;
     }
-    //ILI9341_DrawColorBurst(0xFFFF, 320*240);
-    tft_flush_row_buff(320*240, buf);
+    for(uint32 i = 0; i < (320); i++)
+	{
+		if(i < 320/2)
+			buf2[i] = 0xFFE0;
+		else
+			buf2[i] = 0x001F;
+	}
+    for(uint16 j = 0; j < 240; j++)
+    {
+		tft_display_setxy(0, j, 320, 240);
+		if(j < 240/2)
+			tft_flush_row_buff(320, buf);
+		else
+			tft_flush_row_buff(320, buf2);
+    }
+
 
     while(1)
     {
+    	touch_periodic();
         blinkLED(); /* Make the LED blink           */
+
+        if ((touch_driver.touchmode & MASK_TOUCH_DOWN) != 0 || (touch_driver.touchmode & MASK_TOUCH_MOVE) != 0)
+		{
+            IfxPort_setPinHigh(&MODULE_P13,0);
+			touch_driver.touchmode &= ~MASK_TOUCH_DOWN;   //clear
+			touch_driver.touchmode &= ~MASK_TOUCH_MOVE;   //clear
+			tft_display_setxy(touch_driver.xdisp-5,touch_driver.ydisp-5,touch_driver.xdisp+5,touch_driver.ydisp+5);
+			uint16 buff[100];
+			for(uint8 i = 0; i < 100; i++)
+			{
+				buff[i] = 0x0000;
+			}
+			tft_flush_row_buff(100, &buff[0]);
+            //waitTime(IfxStm_getTicksFromMilliseconds(BSP_DEFAULT_TIMER, 1000));
+            
+		}
     }
     return (1);
 }

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "ifx_cfg.h": "c",
+        "configurationisr.h": "c",
+        "ifxsrc_cfg.h": "c"
+    }
+}

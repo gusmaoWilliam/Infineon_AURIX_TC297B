@@ -80,7 +80,7 @@ typedef struct
             //!< y dimension of tft display
 
 // the iLLD don't use cirular buffering, we need an align to 4 for DMA (32 bit access)
-uint16 Row_Buff[320*120] IFX_ALIGN(4);
+uint16 Row_Buff[320*240] IFX_ALIGN(4);
 volatile uint32 tft_status = 0;
 volatile uint16 tft_id = 0;
 
