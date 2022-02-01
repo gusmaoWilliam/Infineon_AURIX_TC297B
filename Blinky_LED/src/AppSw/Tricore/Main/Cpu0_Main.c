@@ -49,6 +49,10 @@ IfxCpu_syncEvent g_cpuSyncEvent = 0;
 uint16 buf[320];
 uint16 buf2[320];
 
+uint16 bufer[320][240];
+
+
+
 int core0_main(void)
 {
     IfxCpu_enableInterrupts();
@@ -74,19 +78,20 @@ int core0_main(void)
     touch_init();
     waitTime(IfxStm_getTicksFromMilliseconds(BSP_DEFAULT_TIMER, 100));
 
+    
     for(uint32 i = 0; i < (320); i++)
     {
     	if(i < 320/2)
-    		buf[i] = 0x780F;
+    		buf[i] = 0x07E0;
     	else
     		buf[i] = 0x07E0;
     }
     for(uint32 i = 0; i < (320); i++)
 	{
 		if(i < 320/2)
-			buf2[i] = 0xFFE0;
+			buf2[i] = 0x07E0;
 		else
-			buf2[i] = 0x001F;
+			buf2[i] = 0x07E0;
 	}
     for(uint16 j = 0; j < 240; j++)
     {
@@ -97,6 +102,17 @@ int core0_main(void)
 			tft_flush_row_buff(320, buf2);
     }
 
+
+
+    for(uint16 i = 0; i < 320; i++)
+    {
+    	for(uint16 j = 0; j < 240; j++)
+    	{
+    		bufer[i][j] = 0x780F;
+    	}
+    }
+    tft_display_setxy(105, 80, 215, 130);
+    tft_flush_row_buff((51*111), &bufer[0][0]);
 
     while(1)
     {
