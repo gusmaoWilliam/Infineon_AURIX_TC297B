@@ -42,6 +42,9 @@
 #include "tfthw.h"
 #include "touch.h"
 #include "Bsp.h"
+#include "GPT12_Timer_Interrupt.h"
+#include "../lvgl/lvgl.h"
+#include "../lvgl/lv_init.h"
 
 IfxCpu_syncEvent g_cpuSyncEvent = 0;
 #define BG_LED    &MODULE_P20,13
